@@ -1,99 +1,97 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="utf-8"> 
-<title>北京健康管理中心</title> 
+<meta charset="utf-8">
+<title>CSS 网页布局 - 菜鸟教程(runoob.com)</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
-#para1
-{
-	text-align:center;
-	color:red;
-} 
-</style>
-</head>
-<html>
-<head> 
-<meta charset="utf-8"> 
-<title>北京健康管理中心</title> 
-</head>
-<body>
-<p>
-<a href="/113.html">本文本</a> 是一个指向本网站中的一个页面的链接。</p>
+* {
+  box-sizing: border-box;
+}
 
-<p>
-<a href="./113.html">本文本</a> 是一个指向本网站中的一个页面的链接。</p>
+body {
+  margin: 0;
+}
 
-</body>
-</html>
-<body>
-<p id="para1">Hello World!</p>
-<p>这个段落不受该样式的影响。</p>
-</body>
-</html>
+/* 头部样式 */
+.header {
+  background-color: #f1f1f1;
+  padding: 20px;
+  text-align: center;
+}
 
-<html lang="zh-CN">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>北京健康管理中心</title>
-    <style>  
-      body {
-        margin: 0;
-      }
-    </style>
-  </head>
-  <body>
-	  <h1>北京健康管理中心</h1>
-    <style type="text/css">
-      h1 {color:red;}
-      p {color:blue;}
-      </style>
-    <p>这是网页html 的标准模板，各自标签的作用<a target="_blank" rel="noopener noreferrer" href="https://www.bilibili.com/video/BV1hY411j7UM/">看这里介绍</a></p>
-    <p>删除body标签内的所有内容就可以开始写了</p>
-	  <p>这只是用来教学的小工具，为了让很多不会安装或使用vscode的同学先上手，所以如果你想正式使用，请看我后面专门的那期环境配置vscode安装使用视频。</p>
-	  <p>手机端功能有限，仅用于熟悉html、css、js 的基本作用</p>
-	  <p>手机端部分浏览器无法保存文件到本地，请使用Chrome或Edge手机浏览器保存</p>
-	  <p>安卓手机也可以下载<a target="_blank" rel="noopener noreferrer" href="https://www.coolapk.com/apk/top.webcat.editor"> WebCat </a>使用，或者元岛知识库有众多其他方法。</p>
-    <p>推荐uniCloud网站静态托管，：<a target="_blank" rel="noopener noreferrer" href="https://unicloud.dcloud.net.cn/login">https://unicloud.dcloud.net.cn/login </a></p>
-    <p>另外再推荐一个热铁盒静态托管，它既可以在线编辑，又可以直接生成网站，非常方便：<a target="_blank" rel="noopener noreferrer" href="https://host.retiehe.com/">https://host.retiehe.com/ </a></p>
-    <p>此工具无法使用你手机或电脑上的图片，需要前往上面的第三方图床网站上传图片（请勿上传隐私图片），获得后缀为jpg或png的网络图片地址后粘贴到src 属性中</p>
-    <img src="https://www.midorg.com/midlogo.png" alt="logo" width="100px" height="100px">
-    <br>
-    <a
-      href="https://wwyxwwyx.github.io/bhmc/"
-      target="_blank"
-      rel="noopener noreferrer"
-      >
-      北京健康管理中心 https://wwyxwwyx.github.io/bhmc/
-	    北京健康管理中心 ./113
-    </a>
-    <p>一个来自文件夹中的图像:</p>
-    <img src="./02.png"  width="200" height="200"><p>一
-    <img src="./01.jpg"  width="200" height="200"
-<html>
-<head>
-<meta charset="utf-8"> 
-<title>菜鸟教程(runoob.com)</title>
-<style>
-div {
-    background-color: lightgrey;
-    width: 300px;
-    border: 25px solid green;
-    padding: 25px;
-    margin: 25px;
+/* 导航条 */
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+/* 导航链接 */
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* 链接 - 修改颜色 */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* 创建三个相等的列 */
+.column {
+  float: left;
+  width: 33.33%;
+}
+ 
+/* 列后清除浮动 */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+ 
+/* 响应式布局 - 小于 600 px 时改为上下布局 */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
 }
 </style>
 </head>
 <body>
 
-<h2>盒子模型演示</h2>
+<div class="header">
+  <h1>头部区域</h1>
+  <p>重置浏览器大小查看效果。</p>
+</div>
 
-<p>CSS盒模型本质上是一个盒子，封装周围的HTML元素，它包括：边距，边框，填充，和实际内容。</p>
+<div class="topnav">
+  <a href="#">链接</a>
+  <a href="#">链接</a>
+  <a href="#">链接</a>
+</div>
 
-<div>这里是盒子内的实际内容。有 25px 内间距，25px 外间距、25px 绿色边框。</div>
+<div class="row">
+  <div class="column">
+    <h2>第一列</h2>
+    <p>菜鸟教程 - 学的不仅是技术，更是梦想！菜鸟教程 - 学的不仅是技术，更是梦想！菜鸟教程 - 学的不仅是技术，更是梦想！菜鸟教程 - 学的不仅是技术，更是梦想！</p>
+  </div>
+  
+  <div class="column">
+    <h2>第二列</h2>
+    <p>菜鸟教程 - 学的不仅是技术，更是梦想！菜鸟教程 - 学的不仅是技术，更是梦想！菜鸟教程 - 学的不仅是技术，更是梦想！菜鸟教程 - 学的不仅是技术，更是梦想！</p>
+  </div>
+  
+  <div class="column">
+    <h2>第三列</h2>
+    <p>菜鸟教程 - 学的不仅是技术，更是梦想！菜鸟教程 - 学的不仅是技术，更是梦想！菜鸟教程 - 学的不仅是技术，更是梦想！菜鸟教程 - 学的不仅是技术，更是梦想！</p>
+  </div>
+</div>
 
 </body>
-</html>
-
-  </body>
 </html>
